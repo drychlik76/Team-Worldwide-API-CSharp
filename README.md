@@ -2,7 +2,7 @@
 Solution built using swagger gen to generate the client from OpenApi Spec 3.
 
 # Swagger-CodeGen
-`-
+- Generate
 
     java -jar swagger-codegen-cli-3.0.33.jar generate 
     --lang csharp-dotnet2
@@ -10,4 +10,4 @@ Solution built using swagger gen to generate the client from OpenApi Spec 3.
     --output client/TeamWorldwideAPIClientV2-csharp/
     --api-package TeamWorldwideAPI
     --model-package TeamWorldwideModel
-`
+
