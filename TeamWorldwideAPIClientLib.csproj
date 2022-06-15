@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC51488C-54EE-46E2-973C-02B955588A59}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TeamWorldwideAPIClientLib</RootNamespace>
+    <AssemblyName>TeamWorldwideAPIClientLib</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=108.0.1.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>packages\RestSharp.108.0.1\lib\netstandard2.0\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.Serialization.Primitives.4.3.0\lib\net46\System.Runtime.Serialization.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.5.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.5.0.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\AuthenticateApi.cs" />
+    <Compile Include="Api\ClaimApi.cs" />
+    <Compile Include="Api\InvoicesApi.cs" />
+    <Compile Include="Api\ShipmentV2Api.cs" />
+    <Compile Include="Api\TeamBookApi.cs" />
+    <Compile Include="Client\ApiClient.cs" />
+    <Compile Include="Client\ApiException.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Client\Configuration.cs" />
+    <Compile Include="Model\AdditionalReferenceInvoiceItemGetRead.cs" />
+    <Compile Include="Model\AdditionalReferenceJsonldInvoiceItemGetRead.cs" />
+    <Compile Include="Model\AdditionalReferenceJsonldShipmentBookingCreate.cs" />
+    <Compile Include="Model\AdditionalReferenceJsonldShipmentCreate.cs" />
+    <Compile Include="Model\AdditionalReferenceShipmentBookingCreate.cs" />
+    <Compile Include="Model\AdditionalReferenceShipmentCreate.cs" />
+    <Compile Include="Model\AnyOfBookShipmentJsonldTeamBookShipmentCreateBrokerInformation.cs" />
+    <Compile Include="Model\AnyOfBookShipmentJsonldTeamBookShipmentCreateDelivery.cs" />
+    <Compile Include="Model\AnyOfBookShipmentTeamBookShipmentCreateBrokerInformation.cs" />
+    <Compile Include="Model\AnyOfBookShipmentTeamBookShipmentCreateDelivery.cs" />
+    <Compile Include="Model\AnyOfShipmentJsonldShipmentBookingCreateBillTo.cs" />
+    <Compile Include="Model\AnyOfShipmentJsonldShipmentBookingCreateRequestedDelivery.cs" />
+    <Compile Include="Model\AnyOfShipmentJsonldShipmentBookingCreateRequestedPickup.cs" />
+    <Compile Include="Model\AnyOfShipmentShipmentBookingCreateBillTo.cs" />
+    <Compile Include="Model\AnyOfShipmentShipmentBookingCreateRequestedDelivery.cs" />
+    <Compile Include="Model\AnyOfShipmentShipmentBookingCreateRequestedPickup.cs" />
+    <Compile Include="Model\AnyOfShipmentV2ShipmentJsonldShipmentCreateBillTo.cs" />
+    <Compile Include="Model\AnyOfShipmentV2ShipmentJsonldShipmentCreateRequestedDelivery.cs" />
+    <Compile Include="Model\AnyOfShipmentV2ShipmentJsonldShipmentCreateRequestedPickup.cs" />
+    <Compile Include="Model\AnyOfShipmentV2ShipmentShipmentCreateBillTo.cs" />
+    <Compile Include="Model\AnyOfShipmentV2ShipmentShipmentCreateRequestedDelivery.cs" />
+    <Compile Include="Model\AnyOfShipmentV2ShipmentShipmentCreateRequestedPickup.cs" />
+    <Compile Include="Model\BillToInvoiceItemGetRead.cs" />
+    <Compile Include="Model\BillToJsonldInvoiceItemGetRead.cs" />
+    <Compile Include="Model\BillToJsonldShipmentBookingCreate.cs" />
+    <Compile Include="Model\BillToJsonldShipmentCreate.cs" />
+    <Compile Include="Model\BillToShipmentBookingCreate.cs" />
+    <Compile Include="Model\BillToShipmentCreate.cs" />
+    <Compile Include="Model\BookShipmentJsonldTeamBookShipmentCreate.cs" />
+    <Compile Include="Model\BookShipmentTeamBookResponse.cs" />
+    <Compile Include="Model\BookShipmentTeamBookResponseJsonld.cs" />
+    <Compile Include="Model\BookShipmentTeamBookShipmentCreate.cs" />
+    <Compile Include="Model\BrokerInformationJsonldTeamBookShipmentCreate.cs" />
+    <Compile Include="Model\BrokerInformationTeamBookShipmentCreate.cs" />
+    <Compile Include="Model\ClaimClaimCollectionWriteWrite.cs" />
+    <Compile Include="Model\ClaimClaimsResponseClaimCollectionReadRead.cs" />
+    <Compile Include="Model\ClaimClaimsResponseJsonldClaimCollectionReadRead.cs" />
+    <Compile Include="Model\ClaimJsonldClaimCollectionWriteWrite.cs" />
+    <Compile Include="Model\ConsigneeInvoiceItemGetRead.cs" />
+    <Compile Include="Model\ConsigneeJsonldInvoiceItemGetRead.cs" />
+    <Compile Include="Model\ConsigneeJsonldShipmentBookingCreate.cs" />
+    <Compile Include="Model\ConsigneeJsonldShipmentCreate.cs" />
+    <Compile Include="Model\ConsigneeShipmentBookingCreate.cs" />
+    <Compile Include="Model\ConsigneeShipmentCreate.cs" />
+    <Compile Include="Model\Credentials.cs" />
+    <Compile Include="Model\DeliveryJsonldTeamBookShipmentCreate.cs" />
+    <Compile Include="Model\DeliveryTeamBookShipmentCreate.cs" />
+    <Compile Include="Model\Freight.cs" />
+    <Compile Include="Model\FreightJsonld.cs" />
+    <Compile Include="Model\FreightJsonldTeamBookShipmentCreate.cs" />
+    <Compile Include="Model\FreightTeamBookShipmentCreate.cs" />
+    <Compile Include="Model\GetAccessorials.cs" />
+    <Compile Include="Model\GetAccessorialsJsonld.cs" />
+    <Compile Include="Model\GetAccessorialsTeamBookAccessorialJsonldTeamBookGetAccessorialCreateCollectionGetRead.cs" />
+    <Compile Include="Model\GetAccessorialsTeamBookAccessorialTeamBookGetAccessorialCreateCollectionGetRead.cs" />
+    <Compile Include="Model\GetHouseBill.cs" />
+    <Compile Include="Model\GetHouseBillHouseBillHouseBillCollectionGetRead.cs" />
+    <Compile Include="Model\GetHouseBillHouseBillJsonldHouseBillCollectionGetRead.cs" />
+    <Compile Include="Model\GetHouseBillJsonld.cs" />
+    <Compile Include="Model\GetInvoice.cs" />
+    <Compile Include="Model\GetInvoiceInvoiceInvoiceItemGetRead.cs" />
+    <Compile Include="Model\GetInvoiceInvoiceJsonldInvoiceItemGetRead.cs" />
+    <Compile Include="Model\GetInvoiceJsonld.cs" />
+    <Compile Include="Model\GetQuote.cs" />
+    <Compile Include="Model\GetQuoteJsonld.cs" />
+    <Compile Include="Model\GetQuoteQuoteResponse.cs" />
+    <Compile Include="Model\GetQuoteQuoteResponseJsonld.cs" />
+    <Compile Include="Model\GetRate.cs" />
+    <Compile Include="Model\GetRateJsonld.cs" />
+    <Compile Include="Model\GetRateRateResponseJsonldTeamBookGetRateCreateCollectionGetRead.cs" />
+    <Compile Include="Model\GetRateRateResponseTeamBookGetRateCreateCollectionGetRead.cs" />
+    <Compile Include="Model\GetShipmentStatus.cs" />
+    <Compile Include="Model\GetShipmentStatusJsonld.cs" />
+    <Compile Include="Model\GetShipmentStatusShipmentStatusGetShipmentStatusCollectionGetRead.cs" />
+    <Compile Include="Model\GetShipmentStatusShipmentStatusJsonldGetShipmentStatusCollectionGetRead.cs" />
+    <Compile Include="Model\InlineResponse200.cs" />
+    <Compile Include="Model\InlineResponse2001.cs" />
+    <Compile Include="Model\InlineResponse2002.cs" />
+    <Compile Include="Model\InlineResponse2003.cs" />
+    <Compile Include="Model\InlineResponse2004.cs" />
+    <Compile Include="Model\InlineResponse200Hydrasearch.cs" />
+    <Compile Include="Model\InlineResponse200HydrasearchHydramapping.cs" />
+    <Compile Include="Model\InlineResponse200Hydraview.cs" />
+    <Compile Include="Model\InvoiceDetailInvoiceItemGetRead.cs" />
+    <Compile Include="Model\InvoiceDetailJsonldInvoiceItemGetRead.cs" />
+    <Compile Include="Model\OneOfAdditionalReferenceJsonldInvoiceItemGetReadContext.cs" />
+    <Compile Include="Model\OneOfAdditionalReferenceJsonldShipmentBookingCreateContext.cs" />
+    <Compile Include="Model\OneOfAdditionalReferenceJsonldShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfBillToJsonldInvoiceItemGetReadContext.cs" />
+    <Compile Include="Model\OneOfBillToJsonldShipmentBookingCreateContext.cs" />
+    <Compile Include="Model\OneOfBillToJsonldShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfBookShipmentJsonldTeamBookShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfBookShipmentTeamBookResponseJsonldContext.cs" />
+    <Compile Include="Model\OneOfBrokerInformationJsonldTeamBookShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfClaimClaimsResponseJsonldClaimCollectionReadReadContext.cs" />
+    <Compile Include="Model\OneOfClaimJsonldClaimCollectionWriteWriteContext.cs" />
+    <Compile Include="Model\OneOfConsigneeJsonldInvoiceItemGetReadContext.cs" />
+    <Compile Include="Model\OneOfConsigneeJsonldShipmentBookingCreateContext.cs" />
+    <Compile Include="Model\OneOfConsigneeJsonldShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfDeliveryJsonldTeamBookShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfFreightJsonldContext.cs" />
+    <Compile Include="Model\OneOfFreightJsonldTeamBookShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfGetAccessorialsJsonldContext.cs" />
+    <Compile Include="Model\OneOfGetAccessorialsTeamBookAccessorialJsonldTeamBookGetAccessorialCreateCollectionGetReadContext.cs" />
+    <Compile Include="Model\OneOfGetHouseBillHouseBillJsonldHouseBillCollectionGetReadContext.cs" />
+    <Compile Include="Model\OneOfGetHouseBillJsonldContext.cs" />
+    <Compile Include="Model\OneOfGetInvoiceInvoiceJsonldInvoiceItemGetReadContext.cs" />
+    <Compile Include="Model\OneOfGetInvoiceJsonldContext.cs" />
+    <Compile Include="Model\OneOfGetQuoteJsonldContext.cs" />
+    <Compile Include="Model\OneOfGetQuoteQuoteResponseJsonldContext.cs" />
+    <Compile Include="Model\OneOfGetRateJsonldContext.cs" />
+    <Compile Include="Model\OneOfGetRateRateResponseJsonldTeamBookGetRateCreateCollectionGetReadContext.cs" />
+    <Compile Include="Model\OneOfGetShipmentStatusJsonldContext.cs" />
+    <Compile Include="Model\OneOfGetShipmentStatusShipmentStatusJsonldGetShipmentStatusCollectionGetReadContext.cs" />
+    <Compile Include="Model\OneOfInvoiceDetailJsonldInvoiceItemGetReadContext.cs" />
+    <Compile Include="Model\OneOfPickupJsonldTeamBookShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfProjectedCustomerChargeJsonldShipmentBookingCreateContext.cs" />
+    <Compile Include="Model\OneOfProjectedCustomerChargeJsonldShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfProjectedExpenseJsonldShipmentBookingCreateContext.cs" />
+    <Compile Include="Model\OneOfProjectedExpenseJsonldShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfRateBreakDownJsonldTeamBookGetRateCreateCollectionGetReadContext.cs" />
+    <Compile Include="Model\OneOfRateDataJsonldTeamBookGetRateCreateCollectionGetReadContext.cs" />
+    <Compile Include="Model\OneOfRateNoDataJsonldTeamBookGetRateCreateCollectionGetReadContext.cs" />
+    <Compile Include="Model\OneOfRequestedDeliveryJsonldShipmentBookingCreateContext.cs" />
+    <Compile Include="Model\OneOfRequestedDeliveryJsonldShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfRequestedPickupJsonldShipmentBookingCreateContext.cs" />
+    <Compile Include="Model\OneOfRequestedPickupJsonldShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfShipmentAdditionalReferencesJsonldShipmentBookingCreateContext.cs" />
+    <Compile Include="Model\OneOfShipmentAdditionalReferencesJsonldShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfShipmentBookingV2JsonldShipmentBookingCreateContext.cs" />
+    <Compile Include="Model\OneOfShipmentBookingV2ShipmentBookingCreatedJsonldContext.cs" />
+    <Compile Include="Model\OneOfShipmentCreatedJsonldContext.cs" />
+    <Compile Include="Model\OneOfShipmentGoodsHandlingJsonldShipmentBookingCreateContext.cs" />
+    <Compile Include="Model\OneOfShipmentGoodsHandlingJsonldShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfShipmentGoodsJsonldShipmentBookingCreateContext.cs" />
+    <Compile Include="Model\OneOfShipmentGoodsJsonldShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfShipmentJsonldShipmentBookingCreateContext.cs" />
+    <Compile Include="Model\OneOfShipmentNoteResourceJsonldContext.cs" />
+    <Compile Include="Model\OneOfShipmentNoteResourceJsonldShipmentBookingCreateContext.cs" />
+    <Compile Include="Model\OneOfShipmentNoteResourceJsonldShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfShipmentNoteResourceJsonldShipmentNoteResourceJsonldShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfShipmentV2ShipmentCreatedJsonldContext.cs" />
+    <Compile Include="Model\OneOfShipmentV2ShipmentJsonldShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfShipperJsonldInvoiceItemGetReadContext.cs" />
+    <Compile Include="Model\OneOfShipperJsonldShipmentBookingCreateContext.cs" />
+    <Compile Include="Model\OneOfShipperJsonldShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfTeamBookConsigneeJsonldTeamBookShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfTeamBookShipperJsonldTeamBookShipmentCreateContext.cs" />
+    <Compile Include="Model\OneOfUpdateTeamBookingJsonldGetShipmentBookingCollectionGetReadContext.cs" />
+    <Compile Include="Model\PickupJsonldTeamBookShipmentCreate.cs" />
+    <Compile Include="Model\PickupTeamBookShipmentCreate.cs" />
+    <Compile Include="Model\ProjectedCustomerChargeJsonldShipmentBookingCreate.cs" />
+    <Compile Include="Model\ProjectedCustomerChargeJsonldShipmentCreate.cs" />
+    <Compile Include="Model\ProjectedCustomerChargeShipmentBookingCreate.cs" />
+    <Compile Include="Model\ProjectedCustomerChargeShipmentCreate.cs" />
+    <Compile Include="Model\ProjectedExpenseJsonldShipmentBookingCreate.cs" />
+    <Compile Include="Model\ProjectedExpenseJsonldShipmentCreate.cs" />
+    <Compile Include="Model\ProjectedExpenseShipmentBookingCreate.cs" />
+    <Compile Include="Model\ProjectedExpenseShipmentCreate.cs" />
+    <Compile Include="Model\RateBreakDownJsonldTeamBookGetRateCreateCollectionGetRead.cs" />
+    <Compile Include="Model\RateBreakDownTeamBookGetRateCreateCollectionGetRead.cs" />
+    <Compile Include="Model\RateDataJsonldTeamBookGetRateCreateCollectionGetRead.cs" />
+    <Compile Include="Model\RateDataTeamBookGetRateCreateCollectionGetRead.cs" />
+    <Compile Include="Model\RateNoDataJsonldTeamBookGetRateCreateCollectionGetRead.cs" />
+    <Compile Include="Model\RateNoDataTeamBookGetRateCreateCollectionGetRead.cs" />
+    <Compile Include="Model\RequestedDeliveryJsonldShipmentBookingCreate.cs" />
+    <Compile Include="Model\RequestedDeliveryJsonldShipmentCreate.cs" />
+    <Compile Include="Model\RequestedDeliveryShipmentBookingCreate.cs" />
+    <Compile Include="Model\RequestedDeliveryShipmentCreate.cs" />
+    <Compile Include="Model\RequestedPickupJsonldShipmentBookingCreate.cs" />
+    <Compile Include="Model\RequestedPickupJsonldShipmentCreate.cs" />
+    <Compile Include="Model\RequestedPickupShipmentBookingCreate.cs" />
+    <Compile Include="Model\RequestedPickupShipmentCreate.cs" />
+    <Compile Include="Model\ShipmentAdditionalReferencesJsonldShipmentBookingCreate.cs" />
+    <Compile Include="Model\ShipmentAdditionalReferencesJsonldShipmentCreate.cs" />
+    <Compile Include="Model\ShipmentAdditionalReferencesShipmentBookingCreate.cs" />
+    <Compile Include="Model\ShipmentAdditionalReferencesShipmentCreate.cs" />
+    <Compile Include="Model\ShipmentBookingV2JsonldShipmentBookingCreate.cs" />
+    <Compile Include="Model\ShipmentBookingV2ShipmentBookingCreate.cs" />
+    <Compile Include="Model\ShipmentBookingV2ShipmentBookingCreated.cs" />
+    <Compile Include="Model\ShipmentBookingV2ShipmentBookingCreatedJsonld.cs" />
+    <Compile Include="Model\ShipmentCreated.cs" />
+    <Compile Include="Model\ShipmentCreatedJsonld.cs" />
+    <Compile Include="Model\ShipmentGoodsHandlingJsonldShipmentBookingCreate.cs" />
+    <Compile Include="Model\ShipmentGoodsHandlingJsonldShipmentCreate.cs" />
+    <Compile Include="Model\ShipmentGoodsHandlingShipmentBookingCreate.cs" />
+    <Compile Include="Model\ShipmentGoodsHandlingShipmentCreate.cs" />
+    <Compile Include="Model\ShipmentGoodsJsonldShipmentBookingCreate.cs" />
+    <Compile Include="Model\ShipmentGoodsJsonldShipmentCreate.cs" />
+    <Compile Include="Model\ShipmentGoodsShipmentBookingCreate.cs" />
+    <Compile Include="Model\ShipmentGoodsShipmentCreate.cs" />
+    <Compile Include="Model\ShipmentJsonldShipmentBookingCreate.cs" />
+    <Compile Include="Model\ShipmentNoteResource.cs" />
+    <Compile Include="Model\ShipmentNoteResourceJsonld.cs" />
+    <Compile Include="Model\ShipmentNoteResourceJsonldShipmentBookingCreate.cs" />
+    <Compile Include="Model\ShipmentNoteResourceJsonldShipmentCreate.cs" />
+    <Compile Include="Model\ShipmentNoteResourceJsonldShipmentNoteResourceJsonldShipmentCreate.cs" />
+    <Compile Include="Model\ShipmentNoteResourceShipmentBookingCreate.cs" />
+    <Compile Include="Model\ShipmentNoteResourceShipmentCreate.cs" />
+    <Compile Include="Model\ShipmentNoteResourceShipmentNoteResourceJsonldShipmentCreate.cs" />
+    <Compile Include="Model\ShipmentShipmentBookingCreate.cs" />
+    <Compile Include="Model\ShipmentV2ShipmentCreated.cs" />
+    <Compile Include="Model\ShipmentV2ShipmentCreatedJsonld.cs" />
+    <Compile Include="Model\ShipmentV2ShipmentJsonldShipmentCreate.cs" />
+    <Compile Include="Model\ShipmentV2ShipmentShipmentCreate.cs" />
+    <Compile Include="Model\ShipperInvoiceItemGetRead.cs" />
+    <Compile Include="Model\ShipperJsonldInvoiceItemGetRead.cs" />
+    <Compile Include="Model\ShipperJsonldShipmentBookingCreate.cs" />
+    <Compile Include="Model\ShipperJsonldShipmentCreate.cs" />
+    <Compile Include="Model\ShipperShipmentBookingCreate.cs" />
+    <Compile Include="Model\ShipperShipmentCreate.cs" />
+    <Compile Include="Model\TeamBookConsigneeJsonldTeamBookShipmentCreate.cs" />
+    <Compile Include="Model\TeamBookConsigneeTeamBookShipmentCreate.cs" />
+    <Compile Include="Model\TeamBookShipperJsonldTeamBookShipmentCreate.cs" />
+    <Compile Include="Model\TeamBookShipperTeamBookShipmentCreate.cs" />
+    <Compile Include="Model\UpdateTeamBookingGetShipmentBookingCollectionGetRead.cs" />
+    <Compile Include="Model\UpdateTeamBookingJsonldGetShipmentBookingCollectionGetRead.cs" />
+    <Compile Include="Model\UpdateTeamBookingUpdateTeamBooking.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
